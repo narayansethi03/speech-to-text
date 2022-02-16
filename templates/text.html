@@ -1,0 +1,171 @@
+<html>
+<head>
+    <title>Speech-To-Text Converter</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">     
+    <link rel="stylesheet" href="{{url_for('static',filename='css/font-awesome.min.css')}}">     
+    <link rel="stylesheet" href="{{url_for('static',filename='css/aos.css')}}"> 
+     
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+     <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/aos.js')}}"></script>
+     <script src="{{url_for('static',filename='js/custom.js')}}"></script>
+
+</head>
+<body>  
+    
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="{{url_for('index')}}">
+              <i class="fa fa-line-chart"></i>
+             Speech Recognition
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    
+                    <li class="nav-item">
+                        <a href="{{url_for('index')}}" class="nav-link contact">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+     <!-- HERO -->
+     <section class="hero hero-bg d-flex justify-content-center align-items-center">
+               <div class="container">
+                    <div class="row">
+                         <div class="col-lg-12 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                        
+                        </div>
+
+                        <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                              <div class="hero-text">
+
+                                   <h2 class="text-white" data-aos="fade">Ola!<br>Your text is ready. 👇</h2> <!--AOS = Animation on scroll-->
+
+                                    <form method="POST" enctype="multipart/form-data">
+                                   
+                                    
+                                
+                                    </form>
+
+                                   
+                              </div>
+
+                       
+                        </div>
+                        <div class="col-lg-6 col-12">
+                          <div class="hero-image" data-aos="fade-" data-aos-delay="300">
+
+                            <img src="{{url_for('static',filename= 'images/working-girl.png')}}" class="img-fluid" alt="working girl">
+                          </div>
+
+                    </div>
+               </div>
+     </section>
+
+    
+     <section style="margin-top: 10px;">
+
+        <div class="row-new">
+            <div class="col span 1-of-1">
+                <h2 style="text-align: center"; data-aos="fade-up">Here's Your Transcribed Text </h2>
+            </div>
+            
+            <div class="row-new">
+                
+                
+                    <p class="text-black new" style="padding: 30px;" data-aos="fade-up">
+                        {{text}}
+                    </p>
+                    
+                </div>
+            </div>
+
+  
+     </section>
+  
+
+
+      <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
+            <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">Made with  <strong>❤️</strong> by <strong>Narayan Sethi </strong></h1>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="my-4">Contact Info</h4>
+
+           
+
+            <p>
+              <a href="#">
+                <i class="fa fa-envelope mr-2 footer-icon"></i>
+                narayansethi19@gmail.com
+              </a>
+            </p>
+          </div>
+
+          
+
+          <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
+            <p class="copyright-text">NOT Copyright &copy; 2022 Narayan Sethi
+            <br>
+            
+          </div>
+
+          <div class="col-lg-4 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+            
+            <ul class="footer-link">
+              <li><a href="{{url_for('index')}}">Home</a></li>
+              <li><a href="{{url_for('login')}}">Login</a></li>
+              
+              
+            </ul>
+          </div>
+
+          <div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+            <ul class="social-icon">
+              <li><a href="#" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+             
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/aos.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+
+        
+
+
+
+</body>
+</html>
